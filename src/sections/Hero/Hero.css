@@ -1,0 +1,181 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  padding: 0 10%;
+}
+
+.hero__left {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 480px;
+}
+
+.hero__greeting {
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.hero__name {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0;
+  line-height: 1.1;
+}
+
+.hero__title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--color-accent);
+  margin: 0;
+  min-height: 2rem;
+}
+
+.hero__cursor {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.hero__description {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.hero__buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.hero__btn {
+  padding: 10px 24px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.hero__btn--outline {
+  border: 1px solid var(--color-accent);
+  color: var(--color-accent);
+  background: transparent;
+}
+
+.hero__btn--outline:hover {
+  background: var(--color-accent);
+  color: #0a0a0a;
+}
+
+.hero__terminal {
+  background: #111827;
+  border: 1px solid #1e293b;
+  border-radius: 10px;
+  width: 360px;
+  flex-shrink: 0;
+  font-family: "JetBrains Mono";
+  font-size: 0.875rem;
+  overflow: hidden;
+}
+
+.hero__terminal-bar {
+  background: #1e293b;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.hero__terminal-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.hero__terminal-dot--red {
+  background: #ff5f57;
+}
+.hero__terminal-dot--yellow {
+  background: #febc2e;
+}
+.hero__terminal-dot--green {
+  background: #28c840;
+}
+
+.hero__terminal-title {
+  margin-left: auto;
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+.hero__terminal-body {
+  padding: 20px;
+  line-height: 1.8;
+}
+
+.hero__terminal-body p {
+  margin: 0;
+  color: #e2e8f0;
+}
+
+.hero__t-keyword {
+  color: #c084fc;
+}
+.hero__t-var {
+  color: #38bdf8;
+}
+.hero__t-op {
+  color: #e2e8f0;
+}
+.hero__t-key {
+  color: #34d399;
+}
+.hero__t-string {
+  color: #fbbf24;
+}
+.hero__t-bool {
+  color: #f87171;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    padding: 100px 5% 60px;
+    gap: 40px;
+    min-height: auto;
+  }
+
+  .hero__name {
+    font-size: 2.5rem;
+  }
+
+  .hero__terminal {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero__name {
+    font-size: 2rem;
+  }
+
+  .hero__title {
+    font-size: 1.2rem;
+  }
+}

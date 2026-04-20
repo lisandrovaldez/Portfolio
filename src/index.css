@@ -1,0 +1,49 @@
+:root {
+  color-scheme: dark;
+  font-family: "Inter", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --color-bg: #0a0a0a;
+  --color-accent: #38bdf8;
+  --color-text: #e2e8f0;
+  --color-text-muted: #94a3b8;
+  --color-surface: #111827;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-bg);
+  background-image: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.15) 1px,
+    transparent 1px
+  );
+  background-size: 24px 24px;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+
+.reveal--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal--delay-1 {
+  transition-delay: 0.1s;
+}
+.reveal--delay-2 {
+  transition-delay: 0.2s;
+}
+.reveal--delay-3 {
+  transition-delay: 0.3s;
+}
+
+* {
+  box-sizing: border-box;
+}

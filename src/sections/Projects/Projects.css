@@ -1,0 +1,73 @@
+.projects {
+  padding: 80px 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.projects__header {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.projects__tag {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.875rem;
+  color: var(--color-accent);
+  margin: 0;
+}
+
+.projects__title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.projects__subtitle {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  margin: 0;
+  max-width: 480px;
+  line-height: 1.7;
+}
+
+.projects__featured {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.projects__small-label {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  margin: 0 0 16px;
+  font-family: "JetBrains Mono", monospace;
+}
+
+.projects__small-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+@media (max-width: 768px) {
+  .projects {
+    padding: 60px 5%;
+  }
+
+  .projects__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projects__small-row {
+    grid-template-columns: 1fr;
+  }
+}

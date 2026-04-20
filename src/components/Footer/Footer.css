@@ -1,0 +1,63 @@
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 24px 10%;
+  border-top: 1px solid #1e293b;
+  flex-wrap: wrap;
+}
+
+.footer__name {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.875rem;
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.footer__bracket {
+  color: var(--color-accent);
+}
+
+.footer__divider {
+  color: #1e293b;
+}
+
+.footer__copy {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.footer__links {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.footer__link {
+  color: var(--color-text-muted);
+  transition: color 0.2s ease;
+  display: flex;
+}
+
+.footer__link:hover {
+  color: var(--color-accent);
+}
+
+.footer__year {
+  font-size: 0.8rem;
+  color: #334155;
+  font-family: "JetBrains Mono", monospace;
+}
+
+@media (max-width: 480px) {
+  .footer {
+    gap: 10px;
+    padding: 20px 5%;
+  }
+
+  .footer__divider,
+  .footer__copy {
+    display: none;
+  }
+}

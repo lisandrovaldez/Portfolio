@@ -1,0 +1,79 @@
+.carousel {
+  width: 100%;
+  padding: 18px 0;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  background: #111827dc;
+  border-top: 1px solid #1e293b;
+  border-bottom: 1px solid #1e293b;
+}
+
+.carousel::before,
+.carousel::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 120px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.carousel::before {
+  left: 0;
+  background: linear-gradient(to right, #111827, transparent);
+}
+
+.carousel::after {
+  right: 0;
+  background: linear-gradient(to left, #111827, transparent);
+}
+
+.carousel_group {
+  display: flex;
+  flex-shrink: 0;
+  gap: 48px;
+  padding-right: 48px;
+  animation: spin 17s linear infinite;
+}
+
+.carousel:hover .carousel_group {
+  animation-play-state: paused;
+}
+
+@keyframes spin {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.carousel_item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: 1px solid #1e293b;
+  background: #0d1117;
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease;
+  cursor: default;
+}
+
+.carousel_item:hover {
+  border-color: var(--color-accent);
+  transform: translateY(-2px);
+}
+
+.carousel_item span {
+  font-family: "Inter", sans-serif;
+  color: var(--color-text);
+  font-size: 1rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
