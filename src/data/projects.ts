@@ -60,7 +60,7 @@ export const projects: Project[] = [
       "Listado de productos con carrito de compras para practicar manejo de estado global con Zustand.",
     tags: ["React", "TypeScript", "Zustand", "Tailwind"],
     github: "https://github.com/lisandrovaldez/Zustand-cart",
-    demo: "https://zustand-cart-git-main-lisandro-valdezs-projects.vercel.app/",
+    demo: "https://zustand-cart-ten.vercel.app/",
     image: tienda,
   },
   {
